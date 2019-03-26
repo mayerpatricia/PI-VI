@@ -1,0 +1,193 @@
+EESchema Schematic File Version 4
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Isolator:4N35 U1
+U 1 1 5C995FF4
+P 4150 3075
+F 0 "U1" H 4150 3400 50  0000 C CNN
+F 1 "4N35" H 4150 3309 50  0000 C CNN
+F 2 "Gambiarra toperr:sensor_phct203" H 3950 2875 50  0001 L CIN
+F 3 "https://www.vishay.com/docs/81181/4n35.pdf" H 4150 3075 50  0001 L CNN
+	1    4150 3075
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R2
+U 1 1 5C99630B
+P 4900 3075
+F 0 "R2" V 4704 3075 50  0000 C CNN
+F 1 "100R" V 4795 3075 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 4900 3075 50  0001 C CNN
+F 3 "~" H 4900 3075 50  0001 C CNN
+	1    4900 3075
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small R1
+U 1 1 5C99639D
+P 4675 2800
+F 0 "R1" H 4616 2754 50  0000 R CNN
+F 1 "1k" H 4616 2845 50  0000 R CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 4675 2800 50  0001 C CNN
+F 3 "~" H 4675 2800 50  0001 C CNN
+	1    4675 2800
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:C_Small C1
+U 1 1 5C996405
+P 5100 3275
+F 0 "C1" H 5192 3321 50  0000 L CNN
+F 1 "100n" H 5192 3230 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 5100 3275 50  0001 C CNN
+F 3 "~" H 5100 3275 50  0001 C CNN
+	1    5100 3275
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4450 3075 4675 3075
+Wire Wire Line
+	5000 3075 5100 3075
+Wire Wire Line
+	5100 3075 5100 3175
+Wire Wire Line
+	4675 2900 4675 3075
+Connection ~ 4675 3075
+Wire Wire Line
+	4675 3075 4800 3075
+$Comp
+L Transistor_BJT:BC337 Q1
+U 1 1 5C9965AF
+P 5750 3075
+F 0 "Q1" H 5941 3121 50  0000 L CNN
+F 1 "BC337" H 5941 3030 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 5950 3000 50  0001 L CIN
+F 3 "http://www.nxp.com/documents/data_sheet/BC817_BC817W_BC337.pdf" H 5750 3075 50  0001 L CNN
+	1    5750 3075
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5100 3075 5550 3075
+Connection ~ 5100 3075
+Wire Wire Line
+	5850 2725 5850 2875
+$Comp
+L power:GND #PWR0101
+U 1 1 5C9966FA
+P 5850 3525
+F 0 "#PWR0101" H 5850 3275 50  0001 C CNN
+F 1 "GND" H 5855 3352 50  0000 C CNN
+F 2 "" H 5850 3525 50  0001 C CNN
+F 3 "" H 5850 3525 50  0001 C CNN
+	1    5850 3525
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0102
+U 1 1 5C996718
+P 5100 3525
+F 0 "#PWR0102" H 5100 3275 50  0001 C CNN
+F 1 "GND" H 5105 3352 50  0000 C CNN
+F 2 "" H 5100 3525 50  0001 C CNN
+F 3 "" H 5100 3525 50  0001 C CNN
+	1    5100 3525
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0103
+U 1 1 5C99672F
+P 4500 3525
+F 0 "#PWR0103" H 4500 3275 50  0001 C CNN
+F 1 "GND" H 4505 3352 50  0000 C CNN
+F 2 "" H 4500 3525 50  0001 C CNN
+F 3 "" H 4500 3525 50  0001 C CNN
+	1    4500 3525
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0104
+U 1 1 5C996746
+P 3825 3525
+F 0 "#PWR0104" H 3825 3275 50  0001 C CNN
+F 1 "GND" H 3830 3352 50  0000 C CNN
+F 2 "" H 3825 3525 50  0001 C CNN
+F 3 "" H 3825 3525 50  0001 C CNN
+	1    3825 3525
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3850 3175 3825 3175
+Wire Wire Line
+	3825 3175 3825 3525
+Wire Wire Line
+	4450 3175 4500 3175
+Wire Wire Line
+	4500 3175 4500 3525
+Wire Wire Line
+	5100 3525 5100 3375
+Wire Wire Line
+	5850 3525 5850 3275
+$Comp
+L power:+5V #PWR0105
+U 1 1 5C996989
+P 3850 2500
+F 0 "#PWR0105" H 3850 2350 50  0001 C CNN
+F 1 "+5V" H 3865 2673 50  0000 C CNN
+F 2 "" H 3850 2500 50  0001 C CNN
+F 3 "" H 3850 2500 50  0001 C CNN
+	1    3850 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3850 2500 3850 2975
+$Comp
+L power:+5V #PWR0106
+U 1 1 5C996E35
+P 4675 2475
+F 0 "#PWR0106" H 4675 2325 50  0001 C CNN
+F 1 "+5V" H 4690 2648 50  0000 C CNN
+F 2 "" H 4675 2475 50  0001 C CNN
+F 3 "" H 4675 2475 50  0001 C CNN
+	1    4675 2475
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0107
+U 1 1 5C996E4C
+P 5850 2450
+F 0 "#PWR0107" H 5850 2300 50  0001 C CNN
+F 1 "+5V" H 5865 2623 50  0000 C CNN
+F 2 "" H 5850 2450 50  0001 C CNN
+F 3 "" H 5850 2450 50  0001 C CNN
+	1    5850 2450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4675 2475 4675 2700
+Wire Wire Line
+	5850 2450 5850 2525
+$Comp
+L Device:R_Small R3
+U 1 1 5C9974DF
+P 5850 2625
+F 0 "R3" H 5791 2579 50  0000 R CNN
+F 1 "1k" H 5791 2670 50  0000 R CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 5850 2625 50  0001 C CNN
+F 3 "~" H 5850 2625 50  0001 C CNN
+	1    5850 2625
+	-1   0    0    1   
+$EndComp
+$EndSCHEMATC
